@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex,nofollow" />
+	<title>Local Weather</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="script.js"></script>
+	<script src="https://use.fontawesome.com/b759b13a57.js"></script>
+	<link rel="stylesheet" href="styles.css"/>
+	<link rel="stylesheet" href="menu.css"/>
+</head>
+
+<body>
+	<div id='loading_wrap'></div>
+	<div id="splash" align="center" class="animate-bottom">
+		<div class="container">
+			<div class="check centered">
+				<h4>type a location:</h4>
+				<form class="navbar-form">
+					<div class="input-group">
+						<input type="search" placeholder="type here..." class="find-forecast form-control" id="srch-term">
+						<div class="input-group-btn">
+							<button class="btn btn-default" id="search-city" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+						</div>
+					</div>
+				</form>
+				<h4>or give us your location</h4>
+				<button class="location-button" id="access-location" onclick="getLocation()"><i class="fa fa-location-arrow"></i>access location</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Slide Menu -->
+	<nav id="slide-menu">
+
+		<div id="slide-text">
+			<h2> Your </h2>
+			<h2> best </h2>
+			<h2> weather </h2>
+			<h2> app </h2>
+		</div>
+		<ul class="menu-about">
+			<li>-</li>
+			<li>team</li>
+			<li>history</li>
+			<li>contact</li>
+		</ul>
+		<br><br><br>
+		<div id="slide-footer">
+			<p> suggest to a friend </p>
+		</div>
+		<ul class="social-icons">
+			<li><a class="social-icon" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.aldiduzha.com&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><i class="fa fa-facebook"></i></a></li>
+			
+			<li><a href="https://twitter.com/share?url=https://aldiduzha.com&amp;text=Local%20Weather&amp;hashtags=localweather" target="_blank" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+			
+			<li><a href="https://plus.google.com/share?url=https://aldiduzha.com" target="_blank" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+		</ul>
+	</nav>
+
+
+
+	<div id="post-splash">
+
+		<!-- IOS STYLE MENU -->
+		<div class="menu-trigger" onclick="myFunction(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+
+		<p id="demo"></p>
+
+		<!-- TODAY'S FORCAST -->
+		<div class="today-forecast">
+			<div class="eight columns offset-by-two">
+				<div class="weather-info-text">
+					<h3 class="dayname" style="color: #00ffaf">TODAY</h3>
+					<span class="location">-</span><br>
+					<div class="one-third column">
+						<div class="weathericon"></div>
+					</div>
+					<div class="one-third column">
+						<div class="temperature">
+							<span class="maxtemp">~°C</span><br>
+							<span class="mintemp">~°C</span>
+						</div>  
+					</div>						
+				</div>
+			</div>
+		</div>	
+		<!-- END OF TODAY'S FORCAST -->
+
+		<!-- FIVE DAY FORCAST -->
+		<div class="container" id="fiveday">
+			<div class="row">
+				<div class="col-md-2 col-md-offset-1 " align="center">
+					<h3 class="dayname">-</h3>
+					<div class="weathericon"></div><br>        
+					<div class="temperature">
+						<span class="maxtemp">~°C</span><br>
+						<span class="mintemp">~°C</span>
+					</div> 
+				</div>
+
+				<div class="col-md-2" align="center">
+					<h3 class="dayname">-</h3>
+					<div class="weathericon"></div><br>        
+					<div class="temperature">
+						<span class="maxtemp">~°C</span><br>
+						<span class="mintemp">~°C</span>
+					</div> 
+				</div>
+
+				<div class="col-md-2" align="center">
+					<h3 class="dayname">-</h3>
+					<div class="weathericon"></div><br>        
+					<div class="temperature">
+						<span class="maxtemp">~°C</span><br>
+						<span class="mintemp">~°C</span>
+					</div> 
+				</div>
+
+				<div class="col-md-2" align="center">
+					<h3 class="dayname">-</h3>
+					<div class="weathericon"></div><br>        
+					<div class="temperature">
+						<span class="maxtemp">~°C</span><br>
+						<span class="mintemp">~°C</span>
+					</div> 
+				</div>
+
+				<div class="col-md-2" align="center">
+					<h3 class="dayname">-</h3>
+					<div class="weathericon"></div><br>        
+					<div class="temperature">
+						<span class="maxtemp">~°C</span><br>
+						<span class="mintemp">~°C</span>
+					</div> 
+				</div>
+			</div>
+
+		</div>
+		<!-- END OF 5 DAY FORECAST -->
+
+		<footer>
+			<div class="container">
+				<p class="text">Project by <a href="http://www.aldiduzha.com" target="_blank">Aldi Duzha</a></p>
+			</div>
+		</footer>
+
+	</div>
+
+	<script>
+		var x = document.getElementById("demo");
+
+		function getLocation() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			} else { 
+				x.innerHTML = "Geolocation is not supported by this browser.";
+			}
+		}
+
+		function showPosition(position) {
+			x.innerHTML = "Latitude: " + position.coords.latitude + 
+			"<br>Longitude: " + position.coords.longitude;
+		}
+	</script>
+
+
+	<script>
+		/*PreLoading time*/
+		$(document).ready(function(){
+			setTimeout(function(){
+				$('#loading_wrap').fadeOut(1000);
+			}, 2500);
+		});
+
+		/*Click on slide ham button event*/
+		function myFunction(x) {x.classList.toggle("change");}
+
+		/*Slidemenu*/
+		(function() {
+			var $body = document.body
+			, $menu_trigger = $body.getElementsByClassName('menu-trigger')[0];
+
+			if ( typeof $menu_trigger !== 'undefined' ) {
+				$menu_trigger.addEventListener('click', function() {
+					$body.className = ( $body.className == 'menu-active' )? '' : 'menu-active';
+				});
+			}
+		}).call(this);
+
+		/* Click Events */
+		(function() {
+
+			var loc = document.getElementById('access-location'),
+			cit = document.getElementById('search-city'),
+			splash = document.getElementById('splash');
+			postSplash = document.getElementById('post-splash');
+
+			cit.addEventListener('click', function() {
+				$("#splash").fadeOut(100);
+				$("#post-splash").fadeIn(1000);
+				$("body").css("background-color", "#a477fb");
+				splash.style.display = "none";
+				postSplash.style.display = "block";
+			});
+
+			loc.addEventListener('click', function() {
+				$("#splash").fadeOut(100);
+				$("#post-splash").fadeIn(1000);
+				$("body").css("background-color", "#a477fb");
+				splash.style.display = "none";
+				postSplash.style.display = "block";
+			});
+
+		})();
+	</script>
+
+</body>
+</html>

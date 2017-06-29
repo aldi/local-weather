@@ -1,0 +1,167 @@
+ @font-face { font-family: Biko; src: url('fonts/Biko_Regular.otf'); } 
+ @font-face { font-family: Biko_bold; font-weight: bold; src: url('fonts/Biko_Bold.otf');}
+ @font-face { font-family: Biko_light; font-weight: none; src: url('fonts/Biko_Light-Restricted.otf');}
+
+ /* Preloader */
+ #loading_wrap {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('page-loader.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+
+/* SPLASH AREA */
+#splash {
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  padding-top: 20%;
+}
+
+/* enable absolute positioning */
+.inner-addon { 
+  position: absolute;
+  text-align: center; 
+}
+
+.location-button {
+  background-color: #1fffa2;
+}
+
+.location {
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding-top: 100px; 
+  opacity: 0.6;
+}
+
+p.text a {
+  color: #222 !important;
+}
+
+.check {
+  float: none;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.find-forecast {
+  color: purple;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+/* END OF SPLASH AREA */
+
+#post-splash {
+  display: none;
+}
+
+h4  {
+  color: white;
+  font-family: "Helvetica Neue";
+  opacity: 0.9;
+}
+
+body {
+  background-color: #fd636a;
+}
+
+#days {
+  margin-top: 10%;
+}
+
+.today-forecast {
+  text-align: center;
+  padding-top: 8%;
+  padding-bottom: 5%;
+}
+
+.temperature {
+  color: #00ffaf;
+}
+
+.mintemp {
+  opacity: 0.6;
+}
+
+.row {
+  float: none;
+  margin: 0 auto;
+}
+
+h3 {
+  color: white;
+  font-size: 16px;
+}
+
+html {
+  font-family: "Biko";
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0; 
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; 
+}
+
+legend {
+  border: 0;
+  padding: 0; 
+}
+
+textarea {
+  overflow: auto; 
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; 
+}
+
+td,
+th {
+  padding: 0; 
+}
+
+html {
+  font-size: 62.5%; 
+}
+
+body {
+  font-size: 1.5em;
+  line-height: 1.6;
+  font-weight: 100;
+  font-family: "Biko", "HelveticaNeue", "Helvetica Neue";
+  color: #222; 
+}
+
+@media screen and (max-width: 1050px) {
+  input[type="search"] {
+    width: 100%; } 
+  }
+
+/*@media (min-width: 768px) { 
+#fiveday.container {
+  margin-left: 134px;
+}
+}*/
