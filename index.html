@@ -29,7 +29,7 @@
 					</div>
 				</form>
 				<h4>or give us your location</h4>
-				<button class="location-button" id="access-location" onclick="getLocation()"><i class="fa fa-location-arrow"></i>access location</button>
+				<button class="location-button" id="access-location"><i class="fa fa-location-arrow"></i>access location</button>
 			</div>
 		</div>
 	</div>
@@ -72,8 +72,6 @@
 			<div class="bar2"></div>
 			<div class="bar3"></div>
 		</div>
-
-		<p id="demo"></p>
 
 		<!-- TODAY'S FORCAST -->
 		<div class="today-forecast">
@@ -154,24 +152,6 @@
 		</footer>
 
 	</div>
-
-	<script>
-		var x = document.getElementById("demo");
-
-		function getLocation() {
-			if (navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(showPosition);
-			} else { 
-				x.innerHTML = "Geolocation is not supported by this browser.";
-			}
-		}
-
-		function showPosition(position) {
-			x.innerHTML = "Latitude: " + position.coords.latitude + 
-			"<br>Longitude: " + position.coords.longitude;
-		}
-	</script>
-
 
 	<script>
 		/*PreLoading time*/
