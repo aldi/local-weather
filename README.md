@@ -21,7 +21,7 @@
 
 <h2> PREVIEW </h2>
 </br>
-<a href="aldiduzha.com/projects/local-weather" target="_blank"><img src="live_preview.png"/>
+<a href="http://aldiduzha.com/projects/local-weather" target="_blank"><img src="live_preview.png"/>
 </a>
 
 
