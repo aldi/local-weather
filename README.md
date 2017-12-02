@@ -26,11 +26,11 @@
 
 
 <h4>1. Download
-<a href="https://github.com/aldiduzha/local-weather/archive/master.zip" target="_blank">here!
+<a href="https://github.com/aldi/local-weather/archive/master.zip" target="_blank">here!
 </a></h4>
 <h4>2. Click index.html to open the web app. </h4>
 <h4>3. Done!</h4>
 
 <h2>License</h2>
 
-Licensed under [MIT](LICENSE) by [aldiduzha](http://aldiduzha.com).
+Licensed under [MIT](LICENSE) by [aldi](https://aldiduzha.com).
