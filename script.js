@@ -42,7 +42,8 @@ function updateWeather (json) {
   document.getElementsByClassName('dayname')[k].innerHTML = day;
   document.getElementsByClassName('weathericon')[k].innerHTML = "<img src='icons/" + weather + ".png'>";
   document.getElementsByClassName('maxtemp')[k].innerHTML = highTemp + " °C";
-  document.getElementsByClassName('mintemp')[k].innerHTML = lowTemp + " °C"; } }
+  document.getElementsByClassName('mintemp')[k].innerHTML = lowTemp + " °C"; }
+}
 
 
 // UNIX TO DAY
@@ -52,7 +53,8 @@ function timeConverter(UNIX_timestamp){
   var day = a.getDay();
   var time = days[day];
   console.log("the day inside is: " + day);
-  return time; }
+  return time; 
+}
 
 
 //Check for Geoloaction support 
@@ -77,5 +79,5 @@ function getLocation() {
       }
     }
 //If Geolocation is not supported by the browser, alert the user
-else alert("Geolocation is not supported by your browser, download the latest Chrome or Firefox to use this app");
+else alert("Geolocation is not supported by your browser, download the latest Chrome or Firefox to use this web app");
 }
