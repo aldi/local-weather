@@ -10,7 +10,7 @@ window.onload = function(){
         var city = $(".find-forecast").val(); //Get value from form input
         
         //AJAX Request
-        $.getJSON("http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&cnt=6" + "&APPID=ec14d54dd7febfac36e3df98383f621c", function (data) {
+        $.getJSON("https://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&cnt=6" + "&APPID=ec14d54dd7febfac36e3df98383f621c", function (data) {
           var rawJson = JSON.stringify(data);
           var json = JSON.parse(rawJson);
             updateWeather(json); //Update Weather parameters
@@ -71,7 +71,7 @@ function getLocation() {
       longitude = currentPosition.coords.longitude;
 
         //AJAX request
-        $.getJSON("http://api.openweathermap.org/data/2.5/forecast/daily?lat=" + latitude + "&lon=" + longitude + "&cnt=6" + "&APPID=ec14d54dd7febfac36e3df98383f621c", function (data) {
+        $.getJSON("https://api.openweathermap.org/data/2.5/forecast/daily?lat=" + latitude + "&lon=" + longitude + "&cnt=6" + "&APPID=ec14d54dd7febfac36e3df98383f621c", function (data) {
           var rawJson = JSON.stringify(data);
           var json = JSON.parse(rawJson);
             updateWeather(json); //Update Weather parameters
